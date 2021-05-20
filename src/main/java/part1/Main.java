@@ -1,26 +1,19 @@
-package Homework1;
+package part1;
 
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         Integer[] integers = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         String[] strings = {"ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять", "десять"};
 
-        List<Integer> integerList = new ArrayList<>();
-        List<String> stringList = new ArrayList<>();
-
         reverse(3, 7, integers);
         reverse(5, 10, strings);
+        convertToCollection(integers);
 
-        convertToCollection(integerList, integers);
-        convertToCollection(stringList, strings);
 
-        System.out.println(integerList);
-        System.out.println(stringList);
     }
 
     @SafeVarargs
@@ -34,8 +27,8 @@ public class Main {
     }
 
     @SafeVarargs
-    private static <T> void  convertToCollection(List<T> list, T... arr) {
-       list.addAll(Arrays.asList(arr));
+    private static <T> ArrayList<T> convertToCollection(T... arr) {
+        return new ArrayList<>(Arrays.asList(arr));
     }
 
 }

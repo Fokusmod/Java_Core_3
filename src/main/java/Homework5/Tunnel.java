@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 
 public class Tunnel extends Stage {
 
-    Semaphore semaphore = new Semaphore(2);
+    Semaphore semaphore = new Semaphore(Racing.CARS_COUNT/2);
 
     public Tunnel() {
         this.length = 80;

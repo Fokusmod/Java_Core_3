@@ -25,10 +25,8 @@ public class Racing {
 
         for (Car car : cars) { // запуск гонки
             new Thread(car).start();
-
-
-
         }
+
         announceStart.await();
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
 
